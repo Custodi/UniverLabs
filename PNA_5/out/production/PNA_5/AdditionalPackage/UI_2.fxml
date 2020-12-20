@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.SplitMenuButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="750.0" style="-fx-background-color: #ffffcc;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="AdditionalPackage.Controller">
+    <children>
+        <AnchorPane layoutY="103.0" prefHeight="550.0" prefWidth="750.0" style="-fx-background-color: #003366;">
+         <children>
+            <CheckBox fx:id="check" alignment="CENTER" layoutX="175.0" layoutY="333.0" mnemonicParsing="false" onAction="#reset" prefHeight="60.0" prefWidth="400.0" text="Do you need a card?" textAlignment="CENTER" textFill="#fff766" underline="true">
+               <font>
+                  <Font name="Niagara Solid" size="44.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </CheckBox>
+            <Button fx:id="order" disable="true" layoutX="75.0" layoutY="427.0" mnemonicParsing="false" onAction="#accept" prefHeight="80.0" prefWidth="600.0" text="Order a card" textFill="#0e1487">
+               <font>
+                  <Font name="Cooper Black" size="44.0" />
+               </font>
+               <effect>
+                  <Glow level="1.0" />
+               </effect>
+            </Button>
+            <GridPane layoutX="25.0" layoutY="14.0" prefHeight="220.0" prefWidth="700.0">
+              <columnConstraints>
+                  <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="50.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Text fill="#fff70e" strokeType="OUTSIDE" strokeWidth="10.0" text="Name" textOrigin="CENTER">
+                     <font>
+                        <Font name="Bodoni MT Poster Compressed" size="36.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin>
+                  </Text>
+                  <TextField fx:id="name" GridPane.columnIndex="1" />
+                  <Text fill="#fff70e" strokeType="OUTSIDE" strokeWidth="10.0" text="Email" textOrigin="CENTER" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="Bodoni MT Poster Compressed" size="36.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin>
+                  </Text>
+                  <Text fill="#fff70e" strokeType="OUTSIDE" strokeWidth="10.0" text="Surname" textOrigin="CENTER" GridPane.columnIndex="2">
+                     <font>
+                        <Font name="Bodoni MT Poster Compressed" size="36.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin>
+                  </Text>
+                  <Text fill="#fff70e" strokeType="OUTSIDE" strokeWidth="10.0" text="Phone number" textOrigin="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="Bodoni MT Poster Compressed" size="36.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin>
+                  </Text>
+                  <TextField fx:id="email" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <TextField fx:id="surname" GridPane.columnIndex="3" />
+                  <TextField fx:id="number" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+               </children>
+            </GridPane>
+            <SplitMenuButton fx:id="split_menu" layoutX="567.0" layoutY="266.0" mnemonicParsing="false" text="Select a card">
+              <items>
+                <MenuItem fx:id="green_card" mnemonicParsing="false" onAction="#green_click" text="Green card" />
+                <MenuItem fx:id="red_card" mnemonicParsing="false" onAction="#red_click" text="Red card" />
+                  <MenuItem fx:id="blue_card" mnemonicParsing="false" onAction="#blue_click" text="Blue card" />
+              </items>
+            </SplitMenuButton>
+            <Text fill="#fff70e" layoutX="417.0" layoutY="275.0" strokeType="OUTSIDE" strokeWidth="10.0" text="Card system" textOrigin="CENTER">
+               <font>
+                  <Font name="Bodoni MT Poster Compressed" size="36.0" />
+               </font>
+            </Text>
+            <RadioButton fx:id="radiobut_credit" layoutX="162.0" layoutY="260.0" mnemonicParsing="false" selected="true" text="Credit" textFill="#fcff48">
+               <font>
+                  <Font name="Bodoni MT Poster Compressed" size="28.0" />
+               </font>
+               <toggleGroup>
+                  <ToggleGroup fx:id="toogle" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="radiobut_debit" layoutX="287.0" layoutY="260.0" mnemonicParsing="false" text="Debit" textFill="#fcff48" toggleGroup="$toogle">
+               <font>
+                  <Font name="Bodoni MT Poster Compressed" size="28.0" />
+               </font>
+            </RadioButton>
+            <Text fill="#fff70e" layoutX="50.0" layoutY="275.0" strokeType="OUTSIDE" strokeWidth="10.0" text="Card Type" textOrigin="CENTER">
+               <font>
+                  <Font name="Bodoni MT Poster Compressed" size="36.0" />
+               </font>
+            </Text>
+         </children>
+        </AnchorPane>
+      <Label layoutX="11.0" text="Super Mega Hyper Bank">
+         <font>
+            <Font name="Segoe Script Bold" size="56.0" />
+         </font>
+      </Label>
+      <Text fx:id="message" layoutX="280.0" layoutY="692.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Invalid values!" textAlignment="CENTER" textOrigin="BOTTOM" visible="false">
+         <font>
+            <Font name="Comic Sans MS Bold" size="28.0" />
+         </font>
+      </Text>
+    </children>
+</AnchorPane>
