@@ -1,0 +1,22 @@
+<component name="ArtifactManager">
+  <artifact type="javafx" name="BirdClient">
+    <output-path>$PROJECT_DIR$/out/artifacts/BirdClient</output-path>
+    <properties id="javafx-properties">
+      <options>
+        <option name="appClass" value="Classes.Init" />
+        <option name="description" value="" />
+        <option name="height" value="700" />
+        <option name="htmlPlaceholderId" value="" />
+        <option name="title" value="" />
+        <option name="vendor" value="" />
+        <option name="version" value="" />
+        <option name="width" value="1000" />
+      </options>
+    </properties>
+    <root id="root">
+      <element id="archive" name="Ending.jar">
+        <element id="module-output" name="Ending" />
+      </element>
+    </root>
+  </artifact>
+</component>

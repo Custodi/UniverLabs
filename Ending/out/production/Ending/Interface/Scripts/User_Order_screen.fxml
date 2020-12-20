@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane minHeight="700.0" minWidth="1000.0" prefHeight="700.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Interface.Controllers.User_Order_Screen_Controller">
+   <children>
+      <ImageView fitHeight="710.0" fitWidth="1010.0" pickOnBounds="true" smooth="false">
+         <image>
+            <Image url="@../../Assets/Background.bmp" />
+         </image>
+      </ImageView>
+      <Text fill="WHITE" layoutX="294.0" layoutY="121.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tech Market">
+         <font>
+            <Font name="Trebuchet MS" size="80.0" />
+         </font>
+      </Text>
+      <Text fx:id="profile_info" fill="WHITE" layoutX="16.0" layoutY="680.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Профиль: ">
+         <font>
+            <Font name="Trebuchet MS" size="24.0" />
+         </font>
+      </Text>
+      <Button fx:id="exit_profile_button" layoutX="770.0" layoutY="650.0" minHeight="30.0" minWidth="200.0" mnemonicParsing="false" onAction="#profile_exit" prefHeight="30.0" prefWidth="200.0" text="Выйти из профиля">
+         <font>
+            <Font name="Trebuchet MS" size="16.0" />
+         </font>
+      </Button>
+      <Button fx:id="add_order" layoutX="90.0" layoutY="195.0" minHeight="50.0" minWidth="250.0" mnemonicParsing="false" onAction="#add_order_func" text="Добавить заказ">
+         <font>
+            <Font name="Trebuchet MS" size="20.0" />
+         </font>
+      </Button>
+      <TableView fx:id="main_table" layoutX="462.0" layoutY="183.0" minHeight="360.0" minWidth="480.0" prefHeight="360.0" prefWidth="480.0">
+        <columns>
+          <TableColumn fx:id="order_id_col" editable="false" maxWidth="120.0" minWidth="120.0" prefWidth="120.0" text="ID заказа" />
+          <TableColumn fx:id="product_name_col" maxWidth="130.0" minWidth="130.0" prefWidth="130.0" text="Продукт" />
+            <TableColumn fx:id="count_col" maxWidth="100.0" minWidth="100.0" prefWidth="100.0" text="Кол-во" />
+            <TableColumn fx:id="sum_col" maxWidth="130.0" minWidth="130.0" prefWidth="130.0" text="Сумма за продукт" />
+        </columns>
+      </TableView>
+      <Button fx:id="to_text_button" layoutX="89.0" layoutY="442.0" minHeight="50.0" minWidth="250.0" mnemonicParsing="false" onAction="#convert_to_text" prefWidth="250.0" text="Сохранить в текстовый файл" textAlignment="CENTER" wrapText="true">
+         <font>
+            <Font name="Trebuchet MS" size="20.0" />
+         </font>
+      </Button>
+      <Button fx:id="back_to_menu" layoutX="550.0" layoutY="650.0" minHeight="30.0" minWidth="200.0" mnemonicParsing="false" onAction="#back_to_menu_func" prefHeight="30.0" prefWidth="200.0" text="Назад">
+         <font>
+            <Font name="Trebuchet MS" size="16.0" />
+         </font>
+      </Button>
+      <CheckBox fx:id="by_orders_id" layoutX="120.0" layoutY="380.0" mnemonicParsing="false" onAction="#sorting_id" text="По ID заказа" textFill="WHITE">
+         <font>
+            <Font name="Trebuchet MS" size="20.0" />
+         </font>
+      </CheckBox>
+      <Text fill="WHITE" layoutX="139.0" layoutY="294.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Сортировка">
+         <font>
+            <Font name="Trebuchet MS" size="28.0" />
+         </font>
+      </Text>
+      <CheckBox id=" " fx:id="by_order_summary" layoutX="120.0" layoutY="325.0" mnemonicParsing="false" onAction="#sorting_summary" text="По сумме заказа" textFill="WHITE">
+         <font>
+            <Font name="Trebuchet MS" size="20.0" />
+         </font>
+      </CheckBox>
+   </children>
+</AnchorPane>
